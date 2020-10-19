@@ -1,0 +1,83 @@
+            Instalando dependencias
+
+* O @babel/cli nos dá a possibilidade de trabalhar com a interface de linha de comando do babel
+* A pasta node_modules vai armazenar todas as dependencias do projeto
+
+            Configurando o babel
+
+* vai transformar features utilizadas com es6, 7 ou 8 em uma forma que todos os navegadores entendam
+
+* para configurar o babel, temos que fazer: {
+                                                "presets":["@babel/preset-env"]
+                                            }
+* O presets vai entender que o ambiente que estamos trabalhando com o projeto que é o browser
+
+* O babel pode ser usado pra node , react native e vario
+
+* vai converter o código da melhor forma possível
+
+            Herança
+
+* Quando definimos um método constructor que herda outra classe, temos que chamar a classe pai usando a propriedade chamada super, que significa que queremos chamar o constructor da classe pai
+
+            Métodos estáticos
+
+* Quando usamos um método estático, ele não encherga o restante da classe
+
+* temos que passar alguma informação pra ele e ele retornar outra informação independente
+
+* Se tiver um método estático, não precisa de constructor
+
+* Só a classe pra ajudar a fazer algumas coisas.
+
+            Diferença entre mutar e reatribuir um variável
+
+* Quando trabalhamos com o mesmo formato do objeto, porém alteramos informaçoes dentro do objeto ou vetor
+
+            Métodos do array
+
+* O reduce é uma forma de de consumir todo o vetor e transformar em uma unica variavel
+
+* O filter sempre vai retornar true ou false dentro do array
+
+* O find, usamos se quisermos encontrar uma informação dentro do array ou se existe alguma informação no array.
+
+            Operadores rest e spread
+
+* Temos que instalar em forma de plugin, pois não foram acoplados a versão principal do babel 
+* yarn add @babel/plugin-proposal-object-rest-spread -> pacote
+
+        rest
+
+* Pega o resto das propriedades
+Exemplo:
+const user = {
+    nome: 'Lucas',
+    idade: 22,
+    Trabalho: 'TI'
+}
+
+const { nome, ...resto } = user -> resto é o nome da variavel
+
+* Podemos aplicar em vetores também
+
+* const [ a, b, ...c ] = array // Como é um vetor, usaremos um array pra desestruturar. Iremos pegar o primeiro valor e colocar em a, o segundo , em b e o resto em c. E passa pro array.
+
+* podemos usar em parâmetros de function
+
+                spread
+
+* Faz o papel de propagar ou repassar alguma informação de um objeto ou um array pra outra estrutura de dados
+
+                Object short syntax
+
+* Quando o nome da propriedade é igual o nome da variavel dentro do objeto, podemos deixar apenas um deles. Sem os dois pontos.
+Exemplo:
+const nome = 'Miller'
+const idade = 22
+const user = {
+    nome, 
+    idade, 
+    Trabalho: 'TI' // se não for uma variavel, podemos deixar assim
+}
+
